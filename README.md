@@ -47,7 +47,7 @@ project/
 1. Clone repository
 
 ```bash
-git clone https://github.com/yourusername/job-portal-flask.git
+git clone https://github.com/santhoshworkspace26/job_portal_flask.git
 ```
 
 2. Open project folder
