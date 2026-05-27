@@ -89,7 +89,17 @@ job_portal
 
 ## Screenshots
 
-(Add screenshots here later)
+### Home Page
+![Home Page](static/screenshots/home.png)
+
+### Login Page
+![Login Page](static/screenshots/login.png)
+
+### Register Page
+![Register Page](static/screenshots/register.png)
+
+### Dashboard
+![Dashboard](static/screenshots/dashboard.png)
 
 ## Future Improvements
 
