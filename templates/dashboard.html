@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - JobAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="navbar scrolled">
+  <div class="container">
+
+    <a href="{{ url_for('home') }}" class="navbar-brand">
+      <div class="brand-icon">J</div>
+      <span>JobAI</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('jobs') }}">Jobs</a>
+      <a href="{{ url_for('dashboard') }}" class="active">Dashboard</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+
+      <a href="{{ url_for('login') }}" class="btn btn-ghost">
+        Log In
+      </a>
+
+      <a href="{{ url_for('register') }}" class="btn btn-primary">
+        Sign Up
+      </a>
+    </div>
+
+    <button class="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>
+
+  <!-- Mobile Menu -->
+  <!-- Mobile Menu -->
+<div class="mobile-menu">
+  <a href="{{ url_for('home') }}">Home</a>
+  <a href="{{ url_for('jobs') }}">Jobs</a>
+  <a href="{{ url_for('dashboard') }}">Dashboard</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="{{ url_for('login') }}">Log In</a>
+  <a href="{{ url_for('register') }}">Sign Up</a>
+</div>
+
+  <!-- Dashboard Layout -->
+  <div class="container">
+    <div class="dashboard-layout">
+
+      <!-- Sidebar -->
+      <aside class="dashboard-sidebar glass">
+        <div class="sidebar-profile">
+          <div class="sidebar-avatar">JD</div>
+          <h3>John Doe</h3>
+          <p>Senior Developer</p>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#" class="active"><span class="nav-icon">&#128202;</span> Overview</a>
+          <a href="#"><span class="nav-icon">&#128196;</span> Applications</a>
+          <a href="#"><span class="nav-icon">&#128270;</span> Saved Jobs</a>
+          <a href="#"><span class="nav-icon">&#128100;</span> Profile</a>
+          <a href="#"><span class="nav-icon">&#9881;</span> Settings</a>
+          <a href="{{ url_for('login') }}"><span class="nav-icon">&#128682;</span> Logout</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard-main">
+        <div class="dashboard-header animate-in">
+          <h1>Good morning, <span class="text-gradient">John</span></h1>
+          <p>Here's what's happening with your job search</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="dashboard-stats">
+          <div class="dash-stat-card glass-card animate-in stagger-1">
+            <div class="dash-stat-icon icon-bg-blue">&#128196;</div>
+            <div class="dash-stat-value">24</div>
+            <div class="dash-stat-label">Applications Sent</div>
+          </div>
+          <div class="dash-stat-card glass-card animate-in stagger-2">
+            <div class="dash-stat-icon icon-bg-teal">&#128172;</div>
+            <div class="dash-stat-value">8</div>
+            <div class="dash-stat-label">Interview Invites</div>
+          </div>
+          <div class="dash-stat-card glass-card animate-in stagger-3">
+            <div class="dash-stat-icon icon-bg-green">&#127881;</div>
+            <div class="dash-stat-value">3</div>
+            <div class="dash-stat-label">Offers Received</div>
+          </div>
+          <div class="dash-stat-card glass-card animate-in stagger-4">
+            <div class="dash-stat-icon icon-bg-orange">&#128204;</div>
+            <div class="dash-stat-value">12</div>
+            <div class="dash-stat-label">Saved Jobs</div>
+          </div>
+        </div>
+
+        <!-- Applications Section -->
+        <div class="dashboard-section animate-in">
+          <h3>Recent Applications</h3>
+
+          <div class="application-item">
+            <div class="app-info">
+              <div class="app-logo">G</div>
+              <div class="app-details">
+                <h4>Senior Frontend Engineer</h4>
+                <p>Google &middot; Applied 2 days ago</p>
+              </div>
+            </div>
+            <span class="app-status status-interview">Interview</span>
+          </div>
+
+          <div class="application-item">
+            <div class="app-info">
+              <div class="app-logo">M</div>
+              <div class="app-details">
+                <h4>AI/ML Engineer</h4>
+                <p>Microsoft &middot; Applied 5 days ago</p>
+              </div>
+            </div>
+            <span class="app-status status-applied">Applied</span>
+          </div>
+
+          <div class="application-item">
+            <div class="app-info">
+              <div class="app-logo">S</div>
+              <div class="app-details">
+                <h4>Staff Backend Engineer</h4>
+                <p>Stripe &middot; Applied 1 week ago</p>
+              </div>
+            </div>
+            <span class="app-status status-offered">Offered</span>
+          </div>
+
+          <div class="application-item">
+            <div class="app-info">
+              <div class="app-logo">A</div>
+              <div class="app-details">
+                <h4>iOS Developer</h4>
+                <p>Apple &middot; Applied 1 week ago</p>
+              </div>
+            </div>
+            <span class="app-status status-applied">Applied</span>
+          </div>
+
+          <div class="application-item">
+            <div class="app-info">
+              <div class="app-logo">F</div>
+              <div class="app-details">
+                <h4>Product Designer</h4>
+                <p>Figma &middot; Applied 2 weeks ago</p>
+              </div>
+            </div>
+            <span class="app-status status-rejected">Rejected</span>
+          </div>
+        </div>
+
+        <!-- AI Recommendations -->
+        <div class="dashboard-section animate-in">
+          <h3>AI Recommendations</h3>
+          <div class="jobs-grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">
+
+            <div class="job-card">
+              <div class="job-card-header">
+                <div class="job-card-company">
+                  <div class="company-logo">N</div>
+                  <div class="company-info">
+                    <h4>Netflix</h4>
+                    <span>Remote</span>
+                  </div>
+                </div>
+                <span class="job-card-salary">$140k-$210k</span>
+              </div>
+              <h3>Data Scientist</h3>
+              <div class="job-tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag tag-teal">Spark</span>
+              </div>
+              <div class="job-card-footer">
+                <span class="job-posted">4 days ago</span>
+                <span class="job-match">82% match</span>
+              </div>
+              <a href="{{ url_for('apply') }}" class="btn btn-primary btn-sm" style="margin-top:var(--sp-2);width:100%">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+              <div class="job-card-header">
+                <div class="job-card-company">
+                  <div class="company-logo">V</div>
+                  <div class="company-info">
+                    <h4>Vercel</h4>
+                    <span>Remote</span>
+                  </div>
+                </div>
+                <span class="job-card-salary">$130k-$190k</span>
+              </div>
+              <h3>Full Stack Developer</h3>
+              <div class="job-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Node.js</span>
+                <span class="tag tag-teal">TypeScript</span>
+              </div>
+              <div class="job-card-footer">
+                <span class="job-posted">2 days ago</span>
+                <span class="job-match">79% match</span>
+              </div>
+              <a href="{{ url_for('apply') }}" class="btn btn-primary btn-sm" style="margin-top:var(--sp-2);width:100%">Apply Now</a>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
